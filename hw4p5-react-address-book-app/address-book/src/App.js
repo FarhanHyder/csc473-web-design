@@ -15,11 +15,11 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Navbar className="bg-light justify-content-between">
+        <Navbar className="bg-dark justify-content-between" variant="dark">
         <Navbar.Brand href="#home">Address Book</Navbar.Brand>
           <Form inline>
             <FormControl type="text" placeholder="Type here" className=" mr-sm-2" />
-            <Button type="submit">Search</Button>
+            <Button type="submit" variant="outline-info">Search</Button>
           </Form>
         </Navbar>
         
