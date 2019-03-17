@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ListAddresses from './ListAddresses/ListAddresses.js';
 
 // react-bootstrap
 import Navbar from 'react-bootstrap/Navbar'
@@ -53,8 +54,7 @@ class App extends Component {
     ]
   }
 
-
-
+  
 
   render() {
     return (
@@ -67,6 +67,10 @@ class App extends Component {
             <Button type="submit" variant="outline-info">Search</Button>
           </Form>
         </Navbar>
+
+        <ListAddresses addresses={this.state.addresses}>
+
+        </ListAddresses>
         
 
       </div>
