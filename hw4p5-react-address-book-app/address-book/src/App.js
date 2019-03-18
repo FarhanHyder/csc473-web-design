@@ -165,7 +165,7 @@ class App extends Component {
           <br></br>
 
 
-            <Button variant="warning" size="lg" block >
+            <Button type="submit" variant="warning" size="lg" block >
               Add new address
             </Button>
           </Form>
