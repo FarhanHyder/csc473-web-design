@@ -108,22 +108,41 @@ class App extends Component {
 
           <Form>
             <Form.Row>
+              
               <Col>
-                <Form.Control placeholder="First name" />
+                <Form.Control 
+                  placeholder="First name"
+                  value={this.state.formFirstName}
+                  onChange={(e) => this.setState({formFirstName: e.target.value})} />
               </Col>
+
               <Col>
-                <Form.Control placeholder="Last name" />
+                <Form.Control 
+                placeholder="Last name"
+                value={this.state.formLastName}
+                onChange={(e) => this.setState({formLastName: e.target.value})} />
               </Col>
+              
+            </Form.Row>
+            
+            <Form.Row>
+              
+              <Col>
+                <Form.Control 
+                  placeholder="Birthday"
+                  value={this.state.birthday}
+                  onChange={(e) => this.setState({formFirstName: e.target.value})} />
+              </Col>
+
+              <Col>
+                <Form.Control 
+                placeholder="Telephone"
+                value={this.state.telephone}
+                onChange={(e) => this.setState({formLastName: e.target.value})} />
+              </Col>
+              
             </Form.Row>
 
-            <Form.Row>
-              <Col>
-                <Form.Control placeholder="Birthday" />
-              </Col>
-              <Col>
-                <Form.Control placeholder="Telephone" />
-              </Col>
-            </Form.Row>
 
           <br></br>
 
