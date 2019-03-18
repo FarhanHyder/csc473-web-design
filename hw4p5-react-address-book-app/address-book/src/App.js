@@ -68,13 +68,6 @@ class App extends Component {
   
 
 
-  // closeTodoHandler = (key,e) => {
-  //   let todos = [...this.state.todos];
-  //   let deleteIndex = todos.findIndex((item)=>item.key===key);
-  //   todos.splice(deleteIndex, 1);
-  //   this.setState({"todos":todos});
-  // }
-
   deleteAddressHandler = (key) => {
     const addresses = [...this.state.addresses];
     let deleteIndex = addresses.findIndex((item)=>item.key===key);
@@ -139,12 +132,7 @@ class App extends Component {
 
 
        </Container>
-        
 
-        
-
-       
-        
 
       </div>
     );
