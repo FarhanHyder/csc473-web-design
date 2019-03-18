@@ -1,6 +1,10 @@
 import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 const listAddresses = (props) => {
     const addresses = [...props.addresses];
@@ -9,9 +13,44 @@ const listAddresses = (props) => {
         <ListGroup.Item>
             <Card className="bg-light border rounded">
                 <Card.Body className="text-left">
-                <h5> {item.firstName} </h5>
-                <p> {item.lastName} </p>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <h5> 
+                                    <span className="small">FirstName </span>
+                                     {item.firstName} 
+                                </h5>
+
+                            </Col>
+                            <Col>
+                                <h5> 
+                                    <span className="small">LastName </span>
+                                     {item.lastName} 
+                                </h5>
+                            </Col>
+                        </Row>
+
+                        <Row>
+                            <Col>
+                                <h5> 
+                                    <span className="small">Birthday </span>
+                                     {item.birthday} 
+                                </h5>
+
+                            </Col>
+                            <Col>
+                                <h5> 
+                                    <span className="small">Telephone </span>
+                                     {item.telephone} 
+                                </h5>
+                            </Col>
+                        </Row>
+                    </Container>
                 </Card.Body>
+
+                <Card.Footer className="text-muted">
+                    <Button variant="danger" size="sm">Delete</Button>
+                </Card.Footer>
             </Card>
         </ListGroup.Item>
     )
