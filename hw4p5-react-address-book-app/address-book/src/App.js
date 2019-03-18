@@ -124,7 +124,7 @@ class App extends Component {
         
 
 
-          <Form>
+          <Form onSubmit={this.addAddressHandler}>
             <Form.Row>
               
               <Col>
@@ -148,15 +148,15 @@ class App extends Component {
               <Col>
                 <Form.Control 
                   placeholder="Birthday"
-                  value={this.state.birthday}
-                  onChange={(e) => this.setState({formFirstName: e.target.value})} />
+                  value={this.state.formBirthday}
+                  onChange={(e) => this.setState({formBirthday: e.target.value})} />
               </Col>
 
               <Col>
                 <Form.Control 
                 placeholder="Telephone"
-                value={this.state.telephone}
-                onChange={(e) => this.setState({formLastName: e.target.value})} />
+                value={this.state.formTelephone}
+                onChange={(e) => this.setState({formTelephone: e.target.value})} />
               </Col>
               
             </Form.Row>
