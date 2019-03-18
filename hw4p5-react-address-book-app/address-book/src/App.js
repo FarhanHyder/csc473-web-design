@@ -80,22 +80,35 @@ class App extends Component {
     this.setState({addresses: addresses});
   }
 
-  addAddressHandler = (event) => {
-    event.preventDefault();
 
-    const newAddress = {
-      "key": generateKey(),
-      "firstName": this.state.formFirstName,
-      "lastName": this.state.formLastName,
-      "birthday": this.state.birthday,
-      "telephone": this.state.telephone
+
+  addAddressHandler = (event) => {
+
+    //following was created as event.preventDefault() not responding as per
+    if (this.state.formFirstName.length === 0 || 
+        this.state.formLastName.length === 0 ||
+        this.state.formBirthday.length === 0 ||
+        this.state.formTelephone.length === 0){
+
+          alert('Form not complete yet!');
+        }
+
+    else{
+      const newAddress = {
+        "key": generateKey(),
+        "firstName": this.state.formFirstName,
+        "lastName": this.state.formLastName,
+        "birthday": this.state.formBirthday,
+        "telephone": this.state.formTelephone
+      }
+  
+      this.setState({addresses:[...this.state.addresses,newAddress]});
+      this.setState({formFirstName:''});
+      this.setState({formLastName:''})
+      this.setState({formBirthday:''});
+      this.setState({formTelephone:''})
     }
 
-    this.setState({addresses:[...this.state.addresses,newAddress]});
-    this.setState({formFirstName:''});
-    this.setState({formLastName:''})
-    this.setState({formBirthday:''});
-    this.setState({formTelephone:''})
   }
 
   
