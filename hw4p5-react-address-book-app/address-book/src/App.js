@@ -73,9 +73,10 @@ class App extends Component {
   //   this.setState({persons: persons});
   // }
 
-  deleteAddressHandler = (addressIndex) => {
-    const addresses = this.state.addresses;
-    addresses.splice(addressIndex,1);
+  deleteAddressHandler = (event,key) => {
+    const addresses = [...this.state.addresses];
+    const deleteIndex = addresses.findIndex((item) => item.key === key);
+    addresses.splice(deleteIndex,1);
     this.setState({addresses: addresses});
   }
 
