@@ -63,7 +63,12 @@ class App extends Component {
         "birthday": "9/10/1975",
         "telephone": "200-707-8670"
       }
-    ]
+    ],
+
+    "formFirstName":'',
+    "formLastName":'',
+    "formBirthday":'',
+    "formTelephone":'',
   }
   
 
