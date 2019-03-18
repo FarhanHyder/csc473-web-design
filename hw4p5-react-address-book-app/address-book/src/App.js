@@ -80,6 +80,24 @@ class App extends Component {
     this.setState({addresses: addresses});
   }
 
+  addAddressHandler = (event) => {
+    event.preventDefault();
+
+    const newAddress = {
+      "key": generateKey(),
+      "firstName": this.state.formFirstName,
+      "lastName": this.state.formLastName,
+      "birthday": this.state.birthday,
+      "telephone": this.state.telephone
+    }
+
+    this.setState({addresses:[...this.state.addresses,newAddress]});
+    this.setState({formFirstName:''});
+    this.setState({formLastName:''})
+    this.setState({formBirthday:''});
+    this.setState({formTelephone:''})
+  }
+
   
 
   render() {
