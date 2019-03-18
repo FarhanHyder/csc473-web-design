@@ -67,15 +67,17 @@ class App extends Component {
   }
   
 
-  // deletePersonHandler = (personIndex) => {
-  //   const persons = this.state.persons;
-  //   persons.splice(personIndex,1);
-  //   this.setState({persons: persons});
+
+  // closeTodoHandler = (key,e) => {
+  //   let todos = [...this.state.todos];
+  //   let deleteIndex = todos.findIndex((item)=>item.key===key);
+  //   todos.splice(deleteIndex, 1);
+  //   this.setState({"todos":todos});
   // }
 
-  deleteAddressHandler = (event,key) => {
+  deleteAddressHandler = (key) => {
     const addresses = [...this.state.addresses];
-    const deleteIndex = addresses.findIndex((item) => item.key === key);
+    let deleteIndex = addresses.findIndex((item)=>item.key===key);
     addresses.splice(deleteIndex,1);
     this.setState({addresses: addresses});
   }
@@ -95,7 +97,10 @@ class App extends Component {
         </Navbar>
 
         {/* display all the current address in states */}
-        <ListAddresses addresses={this.state.addresses}>  </ListAddresses>
+        <ListAddresses 
+              addresses={this.state.addresses}
+              deleter={this.deleteAddressHandler}
+        ></ListAddresses>
 
         <Button variant="warning" size="lg" block >
           Add new address

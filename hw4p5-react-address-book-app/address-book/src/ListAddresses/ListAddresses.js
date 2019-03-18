@@ -49,7 +49,11 @@ const listAddresses = (props) => {
                 </Card.Body>
 
                 <Card.Footer className="text-muted">
-                    <Button variant="danger" size="sm">Delete</Button>
+                    {/* <Button variant="danger" size="sm" onClick={props.deleter.bind(null,item.key)}>Delete</Button> */}
+                    <Button key={item.key}
+                        variant="danger" size="sm"
+                        onClick={props.deleter.bind(null,item.key)}>Delete
+                    </Button>
                 </Card.Footer>
             </Card>
         </ListGroup.Item>
