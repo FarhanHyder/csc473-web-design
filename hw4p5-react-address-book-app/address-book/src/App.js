@@ -68,9 +68,14 @@ class App extends Component {
           </Form>
         </Navbar>
 
-        <ListAddresses addresses={this.state.addresses}>
+        {/* display all the current address in states */}
+        <ListAddresses addresses={this.state.addresses}>  </ListAddresses>
 
-        </ListAddresses>
+        <Button variant="warning" size="lg" block >
+          Add new address
+        </Button>
+
+        <br></br>
         
 
       </div>
