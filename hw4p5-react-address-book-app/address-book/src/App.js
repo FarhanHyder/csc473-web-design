@@ -96,17 +96,54 @@ class App extends Component {
           </Form>
         </Navbar>
 
-        {/* display all the current address in states */}
+       <Container>
+          {/* display all the current address in states */}
         <ListAddresses 
               addresses={this.state.addresses}
               deleter={this.deleteAddressHandler}
         ></ListAddresses>
 
-        <Button variant="warning" size="lg" block >
-          Add new address
-        </Button>
-
         <br></br>
+
+        
+
+
+          <Form>
+            <Form.Row>
+              <Col>
+                <Form.Control placeholder="First name" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Last name" />
+              </Col>
+            </Form.Row>
+
+            <Form.Row>
+              <Col>
+                <Form.Control placeholder="Birthday" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Telephone" />
+              </Col>
+            </Form.Row>
+
+          <br></br>
+
+
+            <Button variant="warning" size="lg" block >
+              Add new address
+            </Button>
+          </Form>
+
+          <br></br>
+
+
+       </Container>
+        
+
+        
+
+       
         
 
       </div>
